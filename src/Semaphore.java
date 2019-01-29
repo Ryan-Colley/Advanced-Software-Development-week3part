@@ -16,7 +16,7 @@ class Semaphore {
     private int semaphore;
 
     public Semaphore() {
-        semaphore = 1;
+        semaphore = 2;
     }
 
     public Semaphore(int initialValue) {
@@ -41,9 +41,11 @@ class Semaphore {
 
         Writer w1 = new Writer(sem, 1);  // both threads get access to semaphore
         Writer w2 = new Writer(sem, 2);
+        Writer w3 = new Writer(sem, 3);
 
         w1.start();
         w2.start();
+        w3.start();
 
     }  // method main
 
